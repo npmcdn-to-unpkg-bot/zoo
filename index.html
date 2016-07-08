@@ -7,8 +7,245 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zoo5</title>
     <!-- stylesheets -->
-    <link href="//raw.githubusercontent.com/rouzbeh84/zoo/master/css/main.css" media="screen, projection" rel="stylesheet" type="text/css"
-    />
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+      html {
+        position: relative;
+        min-height: 100%
+      }
+
+      body {
+        margin-bottom: 60px
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #f5f5f5
+      }
+
+      body>.container {
+        padding: 60px 15px 0
+      }
+
+      .container .text-muted {
+        margin: 20px 0
+      }
+
+      .footer>.container {
+        padding-right: 15px;
+        padding-left: 15px
+      }
+
+      code {
+        font-size: 80%
+      }
+
+      .navbar-brand {
+        position: relative;
+        z-index: 2;
+        width: 200px;
+        padding: 0 0 0 25px;
+        height: auto
+      }
+
+      .navbar-nav.navbar-right {
+        height: auto;
+        padding-top: 10px
+      }
+
+      .navbar-nav.navbar-right .btn {
+        position: relative;
+        z-index: 2;
+        padding: 4px 20px;
+        margin: 10px auto;
+        -webkit-transition: -webkit-transform 0.15s;
+        transition: -webkit-transform 0.15s;
+        transition: transform 0.15s;
+        transition: transform 0.15s, -webkit-transform 0.15s
+      }
+
+      .navbar .navbar-collapse {
+        position: relative;
+        overflow: hidden !important
+      }
+
+      .navbar .navbar-collapse .navbar-right>li:last-child {
+        padding-left: 20px
+      }
+
+      .navbar .nav-collapse {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        padding-right: 220px;
+        padding-left: 80px;
+        width: 100%
+      }
+
+      .navbar.navbar-default .nav-collapse {
+        background-color: #f8f8f8
+      }
+
+      .navbar.navbar-inverse .nav-collapse {
+        background-color: #222
+      }
+
+      .navbar .nav-collapse .navbar-form {
+        border-width: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none
+      }
+
+      .nav-collapse>li {
+        float: right
+      }
+
+      .btn.btn-circle {
+        border-radius: 5px
+      }
+
+      .btn.btn-outline {
+        background-color: transparent
+      }
+
+      .navbar-nav.navbar-right .btn:not(.collapsed) {
+        background-color: #0054ff;
+        border-color: #0037fa;
+        color: #fff
+      }
+
+      .navbar.navbar-default .nav-collapse,
+      .navbar.navbar-inverse .nav-collapse {
+        height: auto !important;
+        -webkit-transition: -webkit-transform 0.15s;
+        transition: -webkit-transform 0.15s;
+        transition: transform 0.15s;
+        transition: transform 0.15s, -webkit-transform 0.15s;
+        -webkit-transform: translate(0px, -50px);
+        -ms-transform: translate(0px, -50px);
+        transform: translate(0px, -50px)
+      }
+
+      .navbar.navbar-default .nav-collapse.in,
+      .navbar.navbar-inverse .nav-collapse.in {
+        -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate(0px, 0px)
+      }
+
+      @media screen and (max-width: 767px) {
+        .navbar .navbar-collapse .navbar-right>li:last-child {
+          padding-left: 15px;
+          padding-right: 15px
+        }
+        .navbar .nav-collapse {
+          position: absolute;
+          z-index: 1;
+          top: 10px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+          padding-right: 10px;
+          padding-left: 80px;
+          width: 100%
+        }
+        .navbar .nav-collapse .navbar-form {
+          margin: 0
+        }
+        .nav-collapse>li {
+          float: none
+        }
+        .navbar.navbar-default .nav-collapse,
+        .navbar.navbar-inverse .nav-collapse {
+          -webkit-transform: translate(-100%, 0px);
+          -ms-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px)
+        }
+        .navbar.navbar-default .nav-collapse.in,
+        .navbar.navbar-inverse .nav-collapse.in {
+          -webkit-transform: translate(0px, 0px);
+          -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px)
+        }
+        .navbar.navbar-default .nav-collapse.slide-down,
+        .navbar.navbar-inverse .nav-collapse.slide-down {
+          -webkit-transform: translate(0px, -100%);
+          -ms-transform: translate(0px, -100%);
+          transform: translate(0px, -100%)
+        }
+        .navbar.navbar-default .nav-collapse.in.slide-down,
+        .navbar.navbar-inverse .nav-collapse.in.slide-down {
+          -webkit-transform: translate(0px, 0px);
+          -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px)
+        }
+      }
+
+      .glyphicon {
+        margin-right: 5px
+      }
+
+      .list-group {
+        margin-bottom: 0
+      }
+
+      .list-group div.item.col-xs-12.col-sm-6,
+      .list-group div.item.col-xs-12.col-sm-12 {
+        padding: 0;
+        margin: 0
+      }
+
+      .thumbnail {
+        margin-bottom: 0;
+        padding: 0;
+        border-radius: 0;
+        border-color: #fff
+      }
+
+      .item.list-group-item {
+        float: none;
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 10px
+      }
+
+      .item.list-group-item:hover,
+      .item.list-group-item:nth-of-type(odd):hover {
+        background: #428bca
+      }
+
+      .item.list-group-item .list-group-image {
+        margin-right: 10px
+      }
+
+      .item.list-group-item .thumbnail {
+        margin-bottom: 0
+      }
+
+      .item.list-group-item:after,
+      .item.list-group-item:before {
+        display: table;
+        content: " "
+      }
+
+      .item.list-group-item img {
+        float: left
+      }
+
+      .item.list-group-item:after {
+        clear: both
+      }
+
+    </style>
     <!-- fonts -->
 
   </head>
@@ -103,27 +340,27 @@
         <div class="row">
           <div class="item col-xs-12 col-sm-6">
             <div class="thumbnail">
-              <img class="group list-group-image img-responsive" src="http://placehold.it/800x600/008dcd/fff?text=CATEGORY" alt=""
-              />
+              <img class="group list-group-image img-responsive" src="http://placehold.it/800x600/008dcd/fff?text=CATEGORY"
+                  alt="" />
             </div>
           </div>
           <div class="item col-xs-12 col-sm-6">
             <div class="item col-xs-12 col-sm-6">
               <div class="thumbnail">
-                <img class="group list-group-image img-responsive" src="http://placehold.it/800x500/000/fff?text=CATEGORY" alt=""
-                />
+                <img class="group list-group-image img-responsive" src="http://placehold.it/800x500/000/fff?text=CATEGORY"
+                    alt="" />
               </div>
             </div>
             <div class="item col-xs-12 col-sm-6">
               <div class="thumbnail">
-                <img class="group list-group-image img-responsive" src="http://placehold.it/800x500/c9caca/000?text=CATEGORY" alt=""
-                />
+                <img class="group list-group-image img-responsive" src="http://placehold.it/800x500/c9caca/000?text=CATEGORY"
+                    alt="" />
               </div>
             </div>
             <div class="item col-xs-12 col-sm-12">
               <div class="thumbnail">
-                <img class="group list-group-image img-responsive" src="http://placehold.it/800x350/000/fff?text=CATEGORY" alt=""
-                />
+                <img class="group list-group-image img-responsive" src="http://placehold.it/800x350/000/fff?text=CATEGORY"
+                    alt="" />
               </div>
             </div>
           </div>
@@ -132,21 +369,21 @@
           <div class="item col-xs-12 col-sm-6">
             <div class="item col-xs-12 col-sm-12">
               <div class="thumbnail">
-                <img class="group list-group-image img-responsive" src="http://placehold.it/800x200/000/fff?text=CATEGORY" alt=""
-                />
+                <img class="group list-group-image img-responsive" src="http://placehold.it/800x200/000/fff?text=CATEGORY"
+                    alt="" />
               </div>
             </div>
             <div class="item col-xs-12 col-sm-12">
               <div class="thumbnail">
-                <img class="group list-group-image img-responsive" src="http://placehold.it/800x200/000/fff?text=CATEGORY" alt=""
-                />
+                <img class="group list-group-image img-responsive" src="http://placehold.it/800x200/000/fff?text=CATEGORY"
+                    alt="" />
               </div>
             </div>
           </div>
           <div class="item col-xs-12 col-sm-6">
             <div class="thumbnail">
-              <img class="group list-group-image img-responsive" src="http://placehold.it/800x400/b10e10/fff?text=CATEGORY" alt=""
-              />
+              <img class="group list-group-image img-responsive" src="http://placehold.it/800x400/b10e10/fff?text=CATEGORY"
+                  alt="" />
             </div>
           </div>
         </div>
@@ -157,10 +394,10 @@
       <div class="row">
         <div class="item col-xs-12">
           <div class="row">
-          <div class="thumbnail">
-            <img class="group list-group-image img-responsive" src="http://placehold.it/1200x100/333/fff?text=CURRENT%20PROMO" alt=""
-            />
-          </div>
+            <div class="thumbnail">
+              <img class="group list-group-image img-responsive" src="http://placehold.it/1200x100/333/fff?text=CURRENT%20PROMO"
+                  alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -170,10 +407,10 @@
       <div class="row">
         <div class="item col-xs-12">
           <div class="row">
-          <div class="thumbnail">
-            <img class="group list-group-image img-responsive" src="http://placehold.it/1200x200/000/fff?text=BANNER%20ONE" alt=""
-            />
-          </div>
+            <div class="thumbnail">
+              <img class="group list-group-image img-responsive" src="http://placehold.it/1200x200/000/fff?text=BANNER%20ONE"
+                  alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -182,10 +419,10 @@
       <div class="row">
         <div class="item col-xs-12">
           <div class="row">
-          <div class="thumbnail">
-            <img class="group list-group-image img-responsive" src="http://placehold.it/1200x200/000/fff?text=BANNER%20TWO" alt=""
-            />
-          </div>
+            <div class="thumbnail">
+              <img class="group list-group-image img-responsive" src="http://placehold.it/1200x200/000/fff?text=BANNER%20TWO"
+                  alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -205,9 +442,23 @@
     <!-- javascript section -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
     <script type="text/javascript">
-      $(document).ready(function(){$("#list").click(function(t){t.preventDefault(),$("#products .item").addClass("list-group-item")}),$("#grid").click(function(t){t.preventDefault(),$("#products .item").removeClass("list-group-item"),$("#products .item").addClass("grid-group-item")})});
+      $(document).ready(function()
+      {
+        $("#list").click(function(t)
+        {
+          t.preventDefault(), $("#products .item").addClass(
+            "list-group-item")
+        }), $("#grid").click(function(t)
+        {
+          t.preventDefault(), $("#products .item").removeClass(
+            "list-group-item"), $("#products .item").addClass(
+            "grid-group-item")
+        })
+      });
+
     </script>
     <!-- /javascript section -->
   </body>
