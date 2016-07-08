@@ -1,5 +1,11 @@
 # Zoo5 Front End Guidelines
 
+## To get going:
+
+1. `git clone git clone git@ssh.gitlab.zooprinting.com:rouzbehs/zoo5-front-street.git  |  git clone http://gitlab.zooprinting.com/rouzbehs/zoo5-front-street.git`
+1. open `index.html` from root
+
+
 Styling structure:
 
 ```
